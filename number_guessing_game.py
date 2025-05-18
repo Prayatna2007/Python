@@ -4,24 +4,25 @@ def number_guessing_game():
     secret_number = random.randint(1, 100)
     attempts = 0
     
-    print("Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 100.")
+    print("\n\n_____________Welcome to the Number Guessing Game!___________\n")
+    print("_________I'm thinking of a number between 1 and 100.________\n")
     
     while True:
         try:
             # Takes player's guess
-            guess = int(input("Take a guess: "))
+            print("\n")
+            guess = int(input("\t\tTake a guess: "))
             attempts += 1
             
             # For checking the correct number
             if guess < secret_number:
-                print("Low! Try again.")
+                print("\t\tLow! Try again.")
             elif guess > secret_number:
-                print("High! Try again.")
+                print("\t\tHigh! Try again.")
             else:
-                print(f"Congratulations! You guessed the number in {attempts} attempts!")
+                print(f"\t\tCongratulations! You guessed the number in {attempts} attempts!")
                 break
         except ValueError:
-            print("Please enter a valid number.")
+            print("\t\tPlease enter a valid number.")
 
 number_guessing_game()
