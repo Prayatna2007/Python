@@ -8,6 +8,6 @@ def dec_to_bin():
         s += r*pow(10,i)
         n=n//2
         i=i+1
-    print(f"Decimal: {a} \t Binary: {s}")
+    print(f"The Decimal value is {a} and Binary value is {s}")
 
 dec_to_bin()
