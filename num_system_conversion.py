@@ -42,15 +42,30 @@ def hex_to_bin():
         bin+=hex_digits[digit]
     print(f"\tHexa-Decimal Number: {n} \t Binary Equivalent: {bin}")
 
+def dec_to_oct():
+    n=int(input("\n\tEnter a decimal integer:"))
+    a=n
+    i=0
+    s=0
+    while n>0:
+        r = n%8
+        s += r*pow(10,i)
+        n=n//8
+        i=i+1
+    print(f"\tThe Decimal value is {a} and Binary value is {s}")
 
 
 print("\n\n\t_________________________________________________________\n")
 print("\t______________NUMBER SYSTEM CONVERSION___________________\n")
 while(1):
-    x=(int(input("\n\n \t1. For Decimal to Binary Converter \n \t2. For Binary to Decimal Converter \n \t3. For Octal to Binary \n \t4. For Hexa Decimal to Binary \n \t5. For exit \n\t Enter a number(1-5):- ")))
-    match(x):
-        case 1: dec_to_bin()
-        case 2: bin_to_dec()
-        case 3: oct_to_bin()
-        case 4: hex_to_bin()
-        case 5: exit(1)
+    x=(int(input("\n\n \t1. For Decimal to Binary Converter \n \t2. For Binary to Decimal Converter \n \t3. For Octal to Binary \n \t4. For Hexa Decimal to Binary \n \t5. For Decimal to Octal \n\t6. For exit\n\t Enter a number(1-6):- ")))
+    if x>0 and x<7:
+        match(x):
+            case 1: dec_to_bin()
+            case 2: bin_to_dec()
+            case 3: oct_to_bin()
+            case 4: hex_to_bin()
+            case 5:dec_to_oct()
+            case 6: exit(1)
+    else:
+        print("Invalid Input")
