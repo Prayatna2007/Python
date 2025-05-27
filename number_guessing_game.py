@@ -4,7 +4,7 @@ def number_guessing_game():
     secret_number = random.randint(1, 100)
     attempts = 0
     attempts_left = 10
-    
+    print("\n\n This is a Number Guessing game where you hvae to guess a number under 10 attempts and if you failed to find the correct number under the given attempts you lose.....\n\n")
     print("\n\n_____________Welcome to the Number Guessing Game!___________\n")
     print("_________I'm thinking of a number between 1 and 100.________\n")
     
