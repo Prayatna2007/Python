@@ -32,6 +32,6 @@ while(1):
         case 3:
             exit(1)
         case _:
-            print("Invalid Input")
+            print("Invalid Input....Please Enter valid Input")
 
 
