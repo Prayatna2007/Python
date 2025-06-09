@@ -1,9 +1,9 @@
 import random
 import string
 
-def generate_password(length=12):
+l=int(input("Enter the length for password:"))
+def generate_password(length=l):
     characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(random.choices(characters, k=length))
     return password
-print("The password is: \n")
-print(generate_password())
+print("The password is: \t",generate_password())
