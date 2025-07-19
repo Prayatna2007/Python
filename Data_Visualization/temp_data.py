@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read CSV
-df = pd.read_csv("temperature_data.csv")
+df = pd.read_csv('temperature_data.csv')
 
 # Pivot for heatmap (updated syntax)
 heatmap_data = df.pivot(index="month", columns="city", values="temperature")
